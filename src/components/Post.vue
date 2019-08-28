@@ -3,21 +3,17 @@
     <b-card class="post-card">
       <b-row align-h="start">
         <b-col cols="3">
-          <img src="https://randomuser.me/api/portraits/women/47.jpg" />
+          <img :src="post.profileImageUrl" />
         </b-col>
         <b-col cols="9">
           <b-row>
-            <b>Display Name&nbsp;&nbsp;</b>
-            <span>@username&nbsp;&bull;&nbsp;</span>
-            <span>1h</span>
+            <b>{{ post.displayName }}&nbsp;&nbsp;</b>
+            <span>{{ post.username }}&nbsp;&bull;&nbsp;</span>
+            <span>{{ post.timeAgo }}</span>
           </b-row>
           <b-row>
             <br />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Phasellus ac quam quis sem pretium rutrum ultricies fringilla quam.
-              Suspendisse finibus amet.
-            </p>
+            <p>{{ post.text }}</p>
           </b-row>
           <b-row align-h="end">
             <b-link href="#">Reply&nbsp;&bull;&nbsp;</b-link>
@@ -34,6 +30,12 @@
 <script>
 export default {
   name: 'post',
+  props: {
+    post: {
+      type: Array,
+      required: true,
+    },
+  },
 };
 </script>
 
