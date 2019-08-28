@@ -32,4 +32,7 @@ export default {
 </script>
 
 <style>
+.container-fluid {
+  margin-top: 5px;
+}
 </style>

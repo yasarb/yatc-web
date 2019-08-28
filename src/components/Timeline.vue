@@ -27,7 +27,4 @@ export default {
 </script>
 
 <style>
-Post {
-  margin-bottom: 5px;
-}
 </style>
