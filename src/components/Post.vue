@@ -2,10 +2,10 @@
   <div>
     <b-card class="post-card">
       <b-row align-h="start">
-        <b-col cols="3">
-          <img :src="post.profileImageUrl" />
+        <b-col cols="2">
+          <img class="profilePhoto" :src="post.profileImageUrl" />
         </b-col>
-        <b-col cols="9">
+        <b-col cols="10">
           <b-row>
             <b>{{ post.displayName }}&nbsp;&nbsp;</b>
             <span>{{ post.username }}&nbsp;&bull;&nbsp;</span>
@@ -46,5 +46,11 @@ export default {
   margin-bottom: -1px;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.profilePhoto {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
 }
 </style>

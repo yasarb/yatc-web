@@ -28,8 +28,8 @@ export default {
           id: 'post2',
           profileImageUrl:
             'https://pbs.twimg.com/profile_images/974603248119222272/N5PLzyan.jpg',
-          displayName: '',
-          username: '',
+          displayName: 'Ryan Thompson',
+          username: 'ryant',
           timeAgo: '8m',
           text:
             'Apartments occasional boisterous as solicitude to introduced. Or fifteen covered we enjoyed demesne is in prepare. In stimulated my everything it literature. ',
@@ -37,8 +37,8 @@ export default {
         {
           id: 'post3',
           profileImageUrl: 'https://randomuser.me/api/portraits/women/79.jpg',
-          displayName: '',
-          username: '',
+          displayName: 'Judith Kennedy',
+          username: 'jkenn01',
           timeAgo: '12m',
           text:
             'Reasonably so middletons or impression by terminated. Old pleasure required removing elegance him had. Down she bore sing saw calm high. ',
@@ -47,18 +47,19 @@ export default {
           id: 'post4',
           profileImageUrl:
             'https://pbs.twimg.com/profile_images/1099856449918943232/hKv3Fddh.jpg',
-          displayName: '',
-          username: '',
+          displayName: 'Christopher Arnold',
+          username: 'chriss',
           timeAgo: '26m',
-          text: '',
+          text:
+            'Alteration possession dispatched collecting instrument travelling he or on. Snug give made at spot or late that mr. ',
         },
         {
           id: 'post5',
           profileImageUrl:
             'https://images-na.ssl-images-amazon.com/images/M/MV5BMTQwMDQ0NDk1OV5BMl5BanBnXkFtZTcwNDcxOTExNg@@._V1_UY256_CR2,0,172,256_AL_.jpg',
-          displayName: '',
-          username: '',
-          timeAgo: '',
+          displayName: 'Sharlene Hill',
+          username: 'hillarious.sharlenee',
+          timeAgo: '1h',
           text:
             'Ham her demands removal brought minuter raising invited gay. Contented consisted continual curiosity contained get sex. Forth child dried in in aware do.',
         },
@@ -66,11 +67,11 @@ export default {
           id: 'post6',
           profileImageUrl:
             'https://images.pexels.com/photos/274595/pexels-photo-274595.jpeg?h=350&auto=compress&cs=tinysrgb',
-          displayName: '',
-          username: '',
-          timeAgo: '',
+          displayName: 'Janie Long',
+          username: 'jan.the.man',
+          timeAgo: '1h',
           text:
-            ' Defective in do recommend suffering. House it seven in spoil tiled court. Sister others marked fat missed did out use. Alteration possession dispatched collecting instrument travelling he or on. Snug give made at spot or late that mr. ',
+            'Defective in do recommend suffering. House it seven in spoil tiled court. Sister others marked fat missed did out use.',
         },
       ],
     };
