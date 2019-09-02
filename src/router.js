@@ -14,6 +14,12 @@ export default new Router({
       component: Home,
     },
     {
+      path: '/signin',
+      name: 'signin',
+      component: () => import('./views/Signin.vue'),
+      meta: { hideNavigation: true },
+    },
+    {
       path: '/signup',
       name: 'signup',
       component: () => import('./views/Signup.vue'),
