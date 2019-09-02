@@ -1,41 +1,54 @@
 <template>
-  <b-container fluid>
-    <b-row align-h="center" align-items="center">
-      <b-col cols="4">
-        <b-row>
-          <b-col cols="2">
-            <label for="username">Username</label>
-          </b-col>
-          <b-col cols="4">
-            <b-form-input size="lg" type="text" id="username" />
-          </b-col>
-        </b-row>
+  <div>
+    <b-card bg-variant="light">
+      <b-form @submit.prevent="login">
+        <b-form-group
+          label-cols-lg="3"
+          label="Sign in to your account"
+          label-size="lg"
+          label-class="font-weight-bold pt-0"
+          class="mb-0"
+        >
+          <b-form-group label-cols="3" label="Username:" label-align="center" label-for="username">
+            <b-form-input required v-model="form.username" id="username"></b-form-input>
+          </b-form-group>
 
-        <b-row>
-          <b-col cols="2">
-            <label for="password">Password</label>
-          </b-col>
-          <b-col cols="4">
-            <b-form-input size="lg" type="password" id="password" />
-          </b-col>
-        </b-row>
+          <b-form-group label-cols="3" label="Password:" label-align="center" label-for="password">
+            <!-- eslint-disable-next-line -->
+            <b-form-input required v-model="form.password" id="password" type="password"></b-form-input>
+          </b-form-group>
 
-        <b-row align-v="center">
-          <b-col cols="4">
-            <b-button pill variant="primary">Sign in</b-button>
-          </b-col>
-          <b-col cols="4">
-            <b-link to="signup">Continue to sign up</b-link>
-          </b-col>
-        </b-row>
-      </b-col>
-    </b-row>
-  </b-container>
+          <b-button type="submit" variant="primary">Sign in</b-button>
+        </b-form-group>
+      </b-form>
+    </b-card>
+  </div>
 </template>
 
 <script>
+import store from '../store/index';
+import router from '../router';
+import { AUTH_REQUEST } from '../store/actions/auth';
+
 export default {
   name: 'signin',
+  data() {
+    return {
+      form: {
+        username: 'username',
+        password: 'password',
+      },
+    };
+  },
+  methods: {
+    login() {
+      const { username, password } = this.form;
+
+      store.dispatch(AUTH_REQUEST, { username, password }).then(() => {
+        router.push('/');
+      });
+    },
+  },
 };
 </script>
 
